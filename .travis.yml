@@ -3,8 +3,6 @@ branches:
     - master
 
 language: python
-before_install:
-  - pip install awscli
 
 deploy:
   provider: elasticbeanstalk
