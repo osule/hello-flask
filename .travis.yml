@@ -8,12 +8,11 @@ before_install:
 
 deploy:
   provider: elasticbeanstalk
-  app: ""
-  env: ""
+  app: "hello-flask"
   bucket_name: ""
   access_key_id: 
-    secure: "Encrypted <access-key-id>="
+    secure: "qrbTbK2j/dXQe6/9DDNN5wDhPeCcyELPxQYRBin7J1cwoHbBGAZaEnEHj5KsiuqFPV2iUj6gK9Bvby0WZhicOPk1lj46fd/Lp8rvYVPa8C1SVbuUMa46QhW5Qzr9A92J7l15u0+vYeN4vWRMhMRtso4gDhY0gnfTTFeUmyvAq1frk+rxkFfzV4PbNvYsIDrO68KMEBkyurLr0SapL82+33lkLCq+3B2r2uZfotwTT1KILdxjfM3uQxwi2jEzCGSSOREbKZOcGNGCxJE/6InQaL0O7+EGoGDdPZS9vWITvT7z6c0RDTP13/D4FyEOJ9HXfIDe+eWQ/eQjoEwFrsU/m5E4OJXLdibEPNoJFuJU9Vbv1J/eQ7pQ6madRQkpGhy0zk7QyK6PdoGvoZ+mLqK4j8txKGHjZ/C9K4ME9m0A5+pO+tFRYWAac5qBGxpd5vXqj2iX78kXKFZDBZpjlyfuDAnprs6lcudOWsd+C7EHDJ4DMmUbuvJgGR5WmFdK1RBcRMEFgjd0VS7dQ5cK3eyaYECc6gu7dQyjXPSMo43obSnHtyLRwvUnaepP72mHkrihc0KJ/C7bMvUTE8xWydS1Zo+NOFwW6ZMtQct0gIKi1k0C+OaK+dFuKyc2Bjdc5Tc/uDbXgJPU8xEvwCTWqW8iYyLtzJtKlz6maBmIyl787lA="
   secret_access_key:
-    secure: "Encrypted <access-key-id>="
+    secure: "DGz1Vqg4DaDlW3QzimnvwvU/aLZLSr7LJKtOUuPlB0CM7/EzVx0+jM+GTyAN/FRXKkhAyhnMxjBG3DSk8pLNeguZXC/U7Tr4zCek9Kp8BeyL8IpXGI2ZiWr3wpuoYwCkfmH689gf5GHoh5z4g9vXW29OFmG1Pgjoh6sd5Xn/qFES1dmVPB/g/29+diZn6Ks35IL6UGTvoLB8KZxeGfPPMYjJYUH80ZuGyy9gSCfWm8wW2fckhDkYuAbLq+SYx+/u/40iO+L73TWG5vDSccbhkt4kIAFuGZRbyNVGe67loFkwFXqevOYWqSEK/p/45swbfzuNjVlF2PxV+apPsAmENdtRJJD/P2P2qOoX31xQ/xIuTc31JNMTW/X5gN/LP9WJg15cFnjL4NOoHdOjcbzVOqgx2jy//SV/v4CQ22klZdfXxlyem5AnDOQhsaBJb23ZNYsvPQbQUgZUAF5uoiVwmOSNi4hL4B1XNLnDW05UcW0aC7RM8u+MU4V/VJiH8d63RbalTKWIKL3t7CvwNkaZXXnPZWdlq4V1u5giBEfY3DV6fODorUXtA2VfCpUXN8ffkqcZtmhyqLqx72eSDP6yZitjd05EfW3XEDjrIAwOzfKq8i4FGn9kc0DRuhRlmS061n+giifjXKJ2vGeqaAJK+HUuqkM17477gpxmz+iyb9U="
   on:
     branch: master
