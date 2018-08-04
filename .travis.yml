@@ -3,7 +3,8 @@ branches:
     - master
 
 language: python
-
+script:
+  - echo "ready to deploy"
 deploy:
   provider: elasticbeanstalk
   app: "hello-flask"
