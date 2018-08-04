@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/osule/hello-flask.svg?branch=master)](https://travis-ci.org/osule/hello-flask)
+
 # Flask from Terraform and Travis CI to Amazon Elastic Beanstalk
 
 This is a sample application that deploys a flask application in Amazon Elastic Beanstalk Environment.

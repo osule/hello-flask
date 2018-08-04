@@ -42,6 +42,8 @@ resource "aws_elastic_beanstalk_environment" "hello-flask-env" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "InstanceType"
-    value     = "t2.nano"
+
+    # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html
+    value = "t2.nano"
   }
 }
