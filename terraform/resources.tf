@@ -9,6 +9,18 @@ resource "aws_elastic_beanstalk_application" "hello-flask" {
   }
 }
 
+resource "aws_s3_bucket" "hello-flask-bucket" {
+  bucket = "${var.s3_bucket_name}"
+  acl    = "private"
+
+  tags {
+    Name        = "hello flask bucket"
+    Environment = "dev"
+  }
+
+  policy = "${data.aws_iam_policy_document.hello-flask-bucket-policy.json}"
+}
+
 resource "aws_elastic_beanstalk_environment" "hello-flask-env" {
   name                = "hello-flask-${var.env}"
   application         = "${aws_elastic_beanstalk_application.hello-flask.name}"
@@ -18,5 +30,18 @@ resource "aws_elastic_beanstalk_environment" "hello-flask-env" {
   tags = {
     application = "hello-flask"
     env         = "${var.env}"
+  }
+
+  # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction
+  setting {
+    namespace = "aws:elasticbeanstalk:environment"
+    name      = "EnvironmentType"
+    value     = "SingleInstance"
+  }
+
+  setting {
+    namespace = "aws:autoscaling:launchconfiguration"
+    name      = "InstanceType"
+    value     = "t2.nano"
   }
 }
